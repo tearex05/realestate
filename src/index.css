@@ -1,13 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.71, 0.04, 0, 0.99);
+  font-family: "Poppins", sans-serif;
+}
+
+.font1 {
+  font-family: "Poppins", sans-serif;
+}
+
+.wx {
+  font-size: 100%;
+}
+
+.font2 {
+  font-family: "Anton", sans-serif;
+}
+
+.bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.textx {
+  font-size: 14rem;
+  line-height: 1;
+}
+
+.tranx {
+  transition: all 0.3s ease;
+}
+
+.shadowx {
+  text-shadow: 6px 3px black;
+}
+
+.hx {
+  height: 3px;
+}
+
+.hx2 {
+  height: 1px;
+}
+
+.load {
+  animation: load 1s cubic-bezier(0.71, 0.04, 0, 0.99) 0.3s forwards;
+}
+
+.load2 {
+  animation: load2 1s cubic-bezier(0.71, 0.04, 0, 0.99) 1s forwards;
+}
+
+.load3 {
+  animation: load3 1s cubic-bezier(0.71, 0.04, 0, 0.99) 2s forwards;
+}
+
+@media (max-width: 639px) {
+  .animation1 {
+    animation: moving2 1.7s ease infinite;
+  }
+
+  .animation2 {
+    animation: moving2 1.3s ease infinite;
+  }
+
+  .animation3 {
+    animation: moving2 2.4s ease infinite;
+  }
+}
+
+@media (min-width: 640px) {
+  .animation1 {
+    animation: moving 1.7s ease infinite;
+  }
+
+  .animation2 {
+    animation: moving 1.3s ease infinite;
+  }
+
+  .animation3 {
+    animation: moving 2.4s ease infinite;
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moving2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes load2 {
+  0% {
+    transform: translateX(-30vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes load3 {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
